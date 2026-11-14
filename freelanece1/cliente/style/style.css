@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+
+:root {
+    /* CORES PRINCIPAIS */
+    --roxo-principal: #72008A;
+    --roxo-escuro: #430052;
+    --roxo-claro: #E9D5F2;
+
+    /* CORES DE DESTAQUE */
+    --dourado: #FFB800;
+    --verde: #22A447;
+
+    /* FUNDOS */
+    --fundo-principal: #F8F6FA;
+    --fundo-card: #FFFFFF;
+
+    /* TEXTOS */
+    --texto-principal: #211827;
+    --texto-secundario: #77717C;
+    --texto-claro: #FFFFFF;
+
+    /* BORDAS E SOMBRAS */
+    --borda: #E8E1EB;
+    --sombra: 0 4px 12px rgba(67, 0, 82, 0.10);
+
+    /* FONTES */
+    --fonte-principal: 'Poppins', sans-serif;
+    --fonte-titulos: 'Nunito', sans-serif;
+
+    /* ARREDONDAMENTOS */
+    --raio-card: 14px;
+    --raio-botao: 10px;
+    --raio-padrao: 8px;
+}
+
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+
+.imagemAcai {
+    margin: 0px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+
+     object-fit: cover;
+}
+
+.status {
+    color: var(--texto-principal);
+      position: absolute;
+    top: 13%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    z-index: 1;
+
+    background-color: var(--texto-claro);
+    padding: 3px;
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+     width: 100%;
+    
+    position: relative;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.tituloPaginaPrincipal {
+    text-align: center;
+}
+
+.opcoesDeEntrega {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.opcao {
+    color: var(--roxo-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.opcao span {
+    color: var(--texto-principal);
+}
+
+.localizacao {
+    display: flex;
+    flex-direction: row;
+   text-align: center;
+   font-size: 1rem;
+}
+
