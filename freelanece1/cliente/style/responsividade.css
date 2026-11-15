@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@media (max-width: 768px) {
+
+    .menu-hamburguer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .itemHamburguer {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        flex-direction: column;
+        gap: 15px;
+
+        min-width: 160px;
+        padding: 15px;
+
+        background-color: var(--fundo-card);
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .itemHamburguer.ativo {
+        display: flex;
+    }
+}

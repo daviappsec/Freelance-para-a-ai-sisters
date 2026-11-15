@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.statusP {
+    position: absolute;
+    top: 22%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.itemTitulo {
+    background-color: #e9d5f2b9;
+    color: var(--texto-escuro);
+    font-family: var(--font-titulos);
+
+
+    position: absolute;
+    top: 25%;
+    left: 24%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    z-index: 1;
+
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+
+
+[data-lucide="menu"] {
+    width: 32px;
+    height: 32px;
+    stroke-width: 3;
+}
+
+
+
+.titulosProdutos {
+    text-align: center;
+    margin: 10px;
+    color: var(--roxo-escuro);
+    font-weight: bold;
+    font-family: var(--font-titulos);
+}
+
+.menu-hamburguer {
+    display: none;
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--texto-principal);
+    border: none;
+    border-radius: 7px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.itemHamburguer a {
+    color: var(--texto-principal);
+    text-decoration: none;
+}
+
