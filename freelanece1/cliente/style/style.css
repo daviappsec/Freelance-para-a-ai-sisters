@@ -193,11 +193,11 @@ header {
     color: var(--texto-claro);
     text-decoration: none;
     font-family: var(--fonte-principal);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 #idBotaoCardapio {
-    padding: 12px 40px;
+    padding: 12px 42px;
 }
 
 .botaoPaginaPrincipal a {
@@ -205,7 +205,7 @@ header {
     text-decoration: none;
     font-family: var(--fonte-principal);
     font-size: 1.2rem;
-   
+
 }
 
 .botaoPaginaPrincipal:hover {
@@ -213,7 +213,7 @@ header {
     transform: translateY(-4px);
     box-shadow: 0 4px 11px rgba(0, 0, 0, 0.245);
     transition: 0.3s ease;
-     pointer-events: painted;
+    pointer-events: painted;
 }
 
 footer {

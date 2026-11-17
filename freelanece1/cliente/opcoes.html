@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Açaí Sisters | Adcionais</title>
+    <link rel="stylesheet" href="/freelanece1/cliente/style/style.css">
+    <link rel="stylesheet" href="/freelanece1/cliente/style/opcoes.css">
+    <link rel="stylesheet" href="/freelanece1/cliente/style/responsividade.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
+
 <body>
-<h1></h1>  
+
+    <header>
+
+        <section class="descricaoDoProdutoEscolhido">
+
+            <div class="butaoSairDeOpcoes">
+
+                <a href="produtos.html"><i data-lucide="chevron-left"></i></a>
+
+            </div>
+
+            <div class="fotoDaOpcaoSelecionada">
+
+                <!--Foto do produto selecionado-->
+                <img src="/freelanece1/assets/imagens/tigela.png" alt="Foto exemplo">
+
+            </div>
+
+            <div class="descricaoDoAcaiSelecionado">
+
+
+                <h1 class="tituloDoAcai">Açaí tradicional 300ml
+                </h1>
+
+                <hr>
+
+                <p class="descricaoDoAcai">Açai grumet com adicionai da sua escolha composto por açai de banana e
+                    outros produtos de sua escolha. <!-- adicionar um maximo de caracteres--> </p>
+                <hr>
+
+                <span class="valorDoacai">Valor: R$ 12,00</span>
+
+                <hr>
+            </div>
+
+            <div>
+
+                <h2 class="tituloAdicionais"> Adícionais </h2>
+            </div>
+
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="opcoesDeAdicionais">
+
+            <hr>
+            <article class="adicional" data-id="leite-po">
+
+                <div class="informacoesAdicional">
+                    <h3 class="nomeAdicional">Leite em pó</h3>
+                    <span class="precoAdicional" data-preco="2.00">
+                        R$ 2,00
+                    </span>
+                </div>
+
+                <div class="quantidadeAdicional">
+                    <button type="button" class="diminuir">−</button>
+
+                    <span class="quantidade">0</span>
+
+                    <button type="button" class="aumentar">+</button>
+                </div>
+
+            </article>     
+
+
+
+        </section>
+
+        <section class="sectionValorTotalFixado" id="sectionValorTotalFixado">
+            <span class="valorTotalFixado" id="valorTotalFixado">Preço: R$ 19.00</span>
+        </section>
+    </main>
+
+    <footer>
+
+        <span>criado por <a href="https://daviappsec.github.io/Meu-Site/">Davi Moreno</a></span>
+    </footer>
+    <script>
+        lucide.createIcons()
+    </script>
+    <script src="/freelanece1/cliente/script/opcoes.js"></script>
 </body>
+
 </html>
