@@ -1,16 +1,21 @@
 
 "use strict"
 
-// Elementos do HTML
+// ELEMENTOS DO HTML
 const adicionais = document.querySelectorAll(".adicional")
 const precoOriginal = document.querySelector(".valorDoacai")
 const valorTotalFixado = document.getElementById("valorTotalFixado")
 const barraFixa = document.getElementById("sectionValorTotalFixado")
+const botaoAvancar = document.querySelector(".AvancarOPedido")
 
-// Preço inicial do açaí
+// INFORMAÇÕES DO PRODUTO
+const tituloAcai = document.querySelector(".tituloDoAcai").textContent.trim()
+const descricaoAcai = document.querySelector(".descricaoDoAcai").textContent.trim()
+
+// PREÇO DO AÇAÍ
 const precoAcai = 12.00
 
-// Formatar preço em reais
+// FORMATAR VALOR EM REAIS
 function formatarPreco(valor) {
     return valor.toLocaleString("pt-BR", {
         style: "currency",
@@ -18,7 +23,7 @@ function formatarPreco(valor) {
     })
 }
 
-// Calcular e atualizar os preços
+// CALCULAR PREÇO TOTAL
 function calcularTotal() {
 
     let total = precoAcai
@@ -37,14 +42,16 @@ function calcularTotal() {
 
     })
 
-    // Atualizar preço original
+    // Atualizar preço do produto
     precoOriginal.textContent = `Valor: ${formatarPreco(total)}`
 
-    // Atualizar preço da barra fixa
+    // Atualizar barra fixa
     valorTotalFixado.textContent = `Preço: ${formatarPreco(total)}`
+
+    return total
 }
 
-// Controlar os botões de quantidade
+// CONTROLE DOS ADICIONAIS
 adicionais.forEach(function (adicional) {
 
     const botaoAumentar = adicional.querySelector(".aumentar")
@@ -53,6 +60,7 @@ adicionais.forEach(function (adicional) {
 
     let quantidade = 0
 
+    // AUMENTAR
     botaoAumentar.addEventListener("click", function () {
 
         quantidade++
@@ -63,6 +71,7 @@ adicionais.forEach(function (adicional) {
 
     })
 
+    // DIMINUIR
     botaoDiminuir.addEventListener("click", function () {
 
         if (quantidade > 0) {
@@ -79,7 +88,7 @@ adicionais.forEach(function (adicional) {
 
 })
 
-// Mostrar ou esconder a barra fixa
+// BARRA DE PREÇO FIXA
 const observador = new IntersectionObserver(function (entradas) {
 
     entradas.forEach(function (entrada) {
@@ -96,5 +105,68 @@ const observador = new IntersectionObserver(function (entradas) {
 
 observador.observe(precoOriginal)
 
-// Calcular preço inicial
+// AVANÇAR PARA O CARRINHO
+botaoAvancar.addEventListener("click", function () {
+
+    const total = calcularTotal()
+
+    // Capturar os adicionais escolhidos
+    const adicionaisEscolhidos = []
+
+    adicionais.forEach(function (adicional) {
+
+        const quantidade = Number(
+            adicional.querySelector(".quantidade").textContent
+        )
+
+        if (quantidade > 0) {
+
+            adicionaisEscolhidos.push({
+
+                id: adicional.dataset.id,
+
+                nome: adicional.querySelector(".nomeAdicional").textContent.trim(),
+
+                preco: Number(
+                    adicional.querySelector(".precoAdicional").dataset.preco
+                ),
+
+                quantidade: quantidade
+
+            })
+
+        }
+
+    })
+
+    // Montar o produto
+    const produto = {
+
+        nome: tituloAcai,
+
+        descricao: descricaoAcai,
+
+        precoBase: precoAcai,
+
+        adicionais: adicionaisEscolhidos,
+
+        total: total
+
+    }
+
+    // Recuperar carrinho existente
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+
+    // Adicionar produto ao carrinho
+    carrinho.push(produto)
+
+    // Salvar carrinho
+    localStorage.setItem("carrinho", JSON.stringify(carrinho))
+
+    // Ir para a página do carrinho
+    window.location.href = "carrinho.html"
+
+})
+
+// CALCULAR PREÇO INICIAL
 calcularTotal()

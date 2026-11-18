@@ -104,6 +104,7 @@ h2 {
     transform: translateY(-4px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.248);
     transition: 1s;
+    border-radius: 10px;
 
 }
 
@@ -119,9 +120,6 @@ h2 {
     text-align: center;
 }
 
-.opcoesDeAdicionais {
-    padding-bottom: 13px;
-}
 
 .sectionValorTotalFixado {
     padding: 12px;
@@ -140,4 +138,27 @@ h2 {
 
 .sectionValorTotalFixado.visivel {
     display: block;
+}
+
+.butãoAvancarOrPedido {
+  
+    margin-bottom: 13px;
+   text-align: center;
+}
+
+.butãoAvancarOrPedido button {
+    padding: 6px;
+    width: 50%;
+    background-color: var(--roxo-principal);
+    color: white;
+    font-family: var(--fonte-principal);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    border-radius: 12px;
+}
+
+.butãoAvancarOrPedido button:hover {
+    transform:  translateY(-4px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.242);
+    transition: 0.6s;
 }
