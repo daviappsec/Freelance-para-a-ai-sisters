@@ -1,25 +1,23 @@
+
 @charset "UTF-8";
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-.statusP {
-    position: absolute;
-    top: 22%;
-    left: 92%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+/* CABEÇALHO */
+header section {
+    position: relative;
 }
 
+/* TÍTULO SOBRE O HEADER */
 .itemTitulo {
     background-color: #e9d5f2b9;
     color: var(--texto-escuro);
     font-family: var(--font-titulos);
-
 
     position: absolute;
     top: 25%;
@@ -35,7 +33,26 @@
     font-weight: bolder;
 }
 
+/* MENU HAMBÚRGUER */
+.statusP {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    z-index: 20;
+}
 
+.menu-hamburguer {
+    display: flex;
+    margin-top: 10px;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--texto-principal);
+
+    border: none;
+    border-radius: 7px;
+    padding: 7px;
+    cursor: pointer;
+}
 
 [data-lucide="menu"] {
     width: 32px;
@@ -43,8 +60,41 @@
     stroke-width: 3;
 }
 
+/* MENU FECHADO */
+.itemHamburguer {
+    display: none;
+}
 
+/* MENU ABERTO */
+.itemHamburguer.ativo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
+    position: absolute;
+    top: calc(90% + 10px);
+    right: 0;
+
+    width: 180px;
+    padding: 15px;
+
+    background-color: var(--fundo-card);
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+
+.itemHamburguer a {
+    color: var(--texto-principal);
+    text-decoration: none;
+    font-family: var(--font-principal);
+    font-size: 15px;
+}
+
+.itemHamburguer a:hover {
+    color: var(--roxo-principal);
+}
+
+/* TÍTULO DOS PRODUTOS */
 .titulosProdutos {
     text-align: center;
     margin: 10px;
@@ -53,99 +103,131 @@
     font-family: var(--font-titulos);
 }
 
-.menu-hamburguer {
-    display: none;
-    background: rgba(255, 255, 255, 0.85);
-    color: var(--texto-principal);
-    border: none;
-    border-radius: 7px;
-    padding: 6px;
-    cursor: pointer;
-}
-
-.itemHamburguer a {
-    color: var(--texto-principal);
-    text-decoration: none;
-}
-
+/* CARD DOS PRODUTOS */
 .produtoAcai {
     display: flex;
     flex-direction: row;
-    margin: 10px 15px;
-
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
+
+    margin: 10px 15px;
 }
 
+/* IMAGEM DO PRODUTO */
 .produtoAcai img {
     width: 37%;
-    border-radius: 10px;
+    height: 180px;
 
-    height: 160px;
     object-fit: cover;
     border-radius: 15px;
     flex-shrink: 0;
 }
 
+/* DESCRIÇÃO DO PRODUTO */
 .descricaoDoProduto {
-
     display: flex;
     flex-direction: column;
     gap: 2px;
-    margin: 0px 0px 0px 15px;
-    max-width: 70%;
+
+    flex: 1;
+    min-width: 0;
+
     align-items: center;
 }
 
 .descricaoDoProduto p {
     text-align: justify;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
 }
 
+/* TÍTULO DO AÇAÍ */
+.descricaoDoProduto .tituloDoAcai {
+    font-family: var(--font-titulos);
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: center;
+}
 
-
+/* LINHAS DIVISÓRIAS */
 hr {
     border: none;
     height: 2px;
     width: 100%;
-    background: linear-gradient(to right,
-            transparent,
-            var(--roxo-claro),
-            transparent);
-    margin: 3px 0px;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--roxo-claro),
+        transparent
+    );
+
+    margin: 3px 0;
 }
 
-.descricaoDoProduto .tituloDoAcai {
-    font-family: var(--font-titulos);
-    margin: 0px;
-    font-size: 1.5rem;
-}
-
+/* BOTÃO ESCOLHER */
 .divButaoEscolherProduto {
     background-color: var(--roxo-escuro);
+
     padding: 5px;
     width: 80%;
+
     text-align: center;
-    margin-top: 2px;
-    border-radius: 10px;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 .butaoEscolherProduto {
-
     color: var(--texto-claro);
     text-decoration: none;
     display: block;
     padding: 7px;
-    pointer-events: painted;
-
 }
 
+/* DIVISÓRIA ENTRE PRODUTOS */
 .divisoriaDosProdutos {
-    margin: 20px 0px;
+    margin: 20px 0;
     height: 1px;
     width: 100%;
-    background: linear-gradient(to right,
-            transparent,
-            var(--roxo-escuro),
-            transparent);
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--roxo-escuro),
+        transparent
+    );
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+
+    .itemTitulo {
+        font-size: 1.5rem;
+        left: 25%;
+    }
+
+    .produtoAcai {
+        gap: 10px;
+        margin: 10px;
+    }
+
+    .produtoAcai img {
+        width: 37%;
+        height: 160px;
+    }
+
+    .descricaoDoProduto {
+        font-size: 14px;
+    }
+
+    .descricaoDoProduto .tituloDoAcai {
+        font-size: 1.2rem;
+    }
+
+    .divButaoEscolherProduto {
+        width: 100%;
+    }
 }
