@@ -106,6 +106,7 @@ const observador = new IntersectionObserver(function (entradas) {
 observador.observe(precoOriginal)
 
 // AVANÇAR PARA O CARRINHO
+// AVANÇAR PARA FINALIZAÇÃO
 botaoAvancar.addEventListener("click", function () {
 
     const total = calcularTotal()
@@ -154,19 +155,18 @@ botaoAvancar.addEventListener("click", function () {
 
     }
 
-    // Recuperar carrinho existente
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || []
+    // Recuperar pedidos existentes
+    let pedido = JSON.parse(localStorage.getItem("pedido")) || []
 
-    // Adicionar produto ao carrinho
-    carrinho.push(produto)
+    // Adicionar produto ao pedido
+    pedido.push(produto)
 
-    // Salvar carrinho
-    localStorage.setItem("carrinho", JSON.stringify(carrinho))
+    // Salvar pedido
+    localStorage.setItem("pedido", JSON.stringify(pedido))
 
-    // Ir para a página do carrinho
-    window.location.href = "carrinho.html"
+    // Ir para a página de finalização
+    window.location.href = "finalizar.html"
 
 })
-
 // CALCULAR PREÇO INICIAL
 calcularTotal()

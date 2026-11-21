@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açaí Sisters | Peça online</title>
+    <link rel="shortcut icon" href="../assets/imagens/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/finalisar.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>FINALIZAR PEDIDO</h1>
+    </header>
+    <main>
+
+        <section class="resumoDoPedido" id="resumoDoPedido">
+
+            <div>
+
+                <img src="../assets/imagens/tigela.png" alt="Imagem Exemplo">
+
+            </div>
+
+            <div>
+                <h2>nome do acai</h2>
+                <span>quantidade: 2</span>
+                <span>Valor: R$ 23.44</span>
+            </div>
+
+        </section>
+
+        <section class="resumoAdicionais" id="resumoAdicionais">
+
+            <div>
+                <h3>Adicionais</h3>
+
+                <div>
+
+                    <i data-lucide="dot"></i>
+                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
+                    <i data-lucide="dot"></i>
+                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
+                    <i data-lucide="dot"></i>
+                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="informacoesDeValoresDoProduto" id="informacoesDeValoresDoProduto">
+
+            <div class="total" id="total">
+
+                <p>Subtotal - <span id="subtotal">
+                        <!--onde vai aparecer o total-->
+                        R$ 22.45
+                    </span></p>
+
+                <p class="precoDaEntrega">
+                    Entrega - <span id="entrega">R$ 12.13</span>
+                </p>
+
+            </div>
+
+            <div class="formaDePagamento" id="formaDePagamento">
+
+                <select name="pagamento" id="pagamento">
+                    <option value="formaDePagamento" selected disabled>Forma de Pagamento</option>
+
+                    <option value="pix">Pix</option>
+
+                    <option value="dinheiro">Dinheiro</option>
+
+                    <option value="cartaoDeDebito">Caratão de Debito</option>
+
+                    <option value="cartaoDeCredito">Cartão De crédito</option>
+
+                </select>
+
+
+            </div>
+
+            <div class="modalidadeDeEntrega" id="modalidadeDeEntrega">
+
+                <select name="entrega" id="entrega">
+                    <option value="modalidade" selected disabled>Modalidade</option>
+                    <option value="modalidadeRetirada">Retirada</option>
+                    <option value="modalidadeEntrega">Delivery</option>
+                </select>
+
+                <input type="text" placeholder="Digite seu endereço">
+            </div>
+
+            <button type="button">ENVIAR PEDIDO</button>
+        </section>
+
+    </main>
+    <footer>
+
+        <span>criado por <a href="https://daviappsec.github.io/Meu-Site/">Davi Moreno</a></span>
+    </footer>
+
+    <script>
+        lucide.createIcons()
+    </script>
+</body>
+
+</html>
