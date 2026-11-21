@@ -26,10 +26,14 @@
 
             </div>
 
-            <div>
-                <h2>nome do acai</h2>
-                <span>quantidade: 2</span>
-                <span>Valor: R$ 23.44</span>
+            <div class="ultimaDescricaoDoPedido">
+
+                <h2 id="nomeDoAcaiEscolhido">nome do acai</h2>
+                <hr>
+                <span id="quantidadeDoAcaiEscolhido">quantidade: 2</span>
+
+                <hr>
+                <span id="valorDoAcaiEscolhido">Valor: R$ 23.44</span>
             </div>
 
         </section>
@@ -37,18 +41,20 @@
         <section class="resumoAdicionais" id="resumoAdicionais">
 
             <div>
-                <h3>Adicionais</h3>
+                <h3>Adicionais selecionados</h3>
 
-                <div>
+            </div>
+            <div class="ultimaDescricaoDosAdicionais">
+                <div class="organizacao">
 
-                    <i data-lucide="dot"></i>
-                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
-                    <i data-lucide="dot"></i>
-                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
-                    <i data-lucide="dot"></i>
-                    <p>nome do adicional - <span id="valorDoAdicional">R$ 14.32</span></p>
+                    <div class="alinhamento">
+
+                        <i data-lucide="dot"></i>
+                        <p id="nomeDoAdicional">Calda de chocolate - <span id="valorDoAdicional">R$ 14.32</span></p>
+                    </div>
 
                 </div>
+
             </div>
         </section>
 
@@ -88,7 +94,9 @@
             <div class="modalidadeDeEntrega" id="modalidadeDeEntrega">
 
                 <select name="entrega" id="entrega">
+
                     <option value="modalidade" selected disabled>Modalidade</option>
+
                     <option value="modalidadeRetirada">Retirada</option>
                     <option value="modalidadeEntrega">Delivery</option>
                 </select>
@@ -97,6 +105,7 @@
             </div>
 
             <button type="button">ENVIAR PEDIDO</button>
+            <a href="./opcoes.html">RETORNAR</a>
         </section>
 
     </main>
