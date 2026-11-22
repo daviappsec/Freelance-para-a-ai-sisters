@@ -42,8 +42,9 @@
 
             <div>
                 <h3>Adicionais selecionados</h3>
-
+                <hr>
             </div>
+
             <div class="ultimaDescricaoDosAdicionais">
                 <div class="organizacao">
 
@@ -60,49 +61,49 @@
 
         <section class="informacoesDeValoresDoProduto" id="informacoesDeValoresDoProduto">
 
+            <div class="tituloDoTotal">
+
+                <h3>valor do pedido</h3>
+
+            </div>
+
             <div class="total" id="total">
 
                 <p>Subtotal - <span id="subtotal">
                         <!--onde vai aparecer o total-->
                         R$ 22.45
                     </span></p>
-
-                <p class="precoDaEntrega">
-                    Entrega - <span id="entrega">R$ 12.13</span>
-                </p>
-
             </div>
 
-            <div class="formaDePagamento" id="formaDePagamento">
+            <div class="dropdown">
+                <div class="dropdown-btn" id="dropdownBtn">
+                    Escolha uma opção
+                    <span>⌄</span>
+                </div>
 
-                <select name="pagamento" id="pagamento">
-                    <option value="formaDePagamento" selected disabled>Forma de Pagamento</option>
-
-                    <option value="pix">Pix</option>
-
-                    <option value="dinheiro">Dinheiro</option>
-
-                    <option value="cartaoDeDebito">Caratão de Debito</option>
-
-                    <option value="cartaoDeCredito">Cartão De crédito</option>
-
-                </select>
-
-
+                <div class="dropdown-options" id="dropdownOptions">
+                    <div class="option">Chocolate</div>
+                    <div class="option">Morango</div>
+                    <div class="option">Açaí</div>
+                    <div class="option">Maracujá</div>
+                </div>
             </div>
 
-            <div class="modalidadeDeEntrega" id="modalidadeDeEntrega">
+            <div class="dropdown-entrega">
+                <div class="dropdown-btn-entrega" id="entregaBtn">
+                    Modalidade de entrega
+                    <span>⌄</span>
+                </div>
 
-                <select name="entrega" id="entrega">
-
-                    <option value="modalidade" selected disabled>Modalidade</option>
-
-                    <option value="modalidadeRetirada">Retirada</option>
-                    <option value="modalidadeEntrega">Delivery</option>
-                </select>
-
-                <input type="text" placeholder="Digite seu endereço">
+                <div class="dropdown-options-entrega" id="entregaOptions">
+                    <div class="option-entrega">Retirada no local</div>
+                    <div class="option-entrega">Entrega em domicílio</div>
+                </div>
             </div>
+
+            <!--So aparece se for entrega-->
+            <input type="text" placeholder="Digite seu endereço">
+
 
             <button type="button">ENVIAR PEDIDO</button>
             <a href="./opcoes.html">RETORNAR</a>
@@ -117,6 +118,8 @@
     <script>
         lucide.createIcons()
     </script>
+
+    <script src="./script/finalizar.js"></script>
 </body>
 
 </html>

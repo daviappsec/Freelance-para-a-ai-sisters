@@ -55,15 +55,14 @@ img {
 }
 
 .ultimaDescricaoDoPedido h2,
-span,
-hr {
+span {
     margin-bottom: 7px;
     font-weight: bold;
 }
 
 hr {
     border: none;
-    height: 2px;
+    height: 3px;
     width: 100%;
 
     background: linear-gradient(to right,
@@ -71,6 +70,8 @@ hr {
             var(--roxo-degrader),
             transparent);
 
+    margin: 7px;
+    font-weight: bold;
 
 }
 
@@ -78,11 +79,16 @@ hr {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 6px solid var(--roxo-degrader);
+    border-radius: 10px;
+    padding: 7px;
 }
 
-.resumoAdicionais h3 {
+h3 {
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin: 18px;
     text-transform: uppercase;
     font-weight: bolder;
@@ -95,21 +101,143 @@ hr {
     flex-direction: column;
 }
 
-.organizacao {
-    display: flex;
-    flex-direction: column;
-    border: 6px solid var(--roxo-degrader);
-    border-radius: 10px;
-    padding: 7px;
-}
+
 
 .organizacao p {
     font-size: 1.3rem;
     text-transform: capitalize;
+
 }
 
 .alinhamento {
     display: flex;
     flex-direction: row;
     margin-bottom: 6px;
+}
+
+.informacoesDeValoresDoProduto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 10px 10px 10px;
+    padding: 10px;
+    border: 6px solid var(--roxo-degrader);
+    border-radius: 10px;
+}
+
+.total {
+
+    margin: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.41);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.total p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 3px;
+    color: var(--roxo-escuro);
+    text-align: center;
+}
+
+.total span {
+    font-weight: bolder;
+}
+
+.dropdown {
+    width: 90%;
+    position: relative;
+}
+
+.dropdown-btn {
+    background: var(--roxo-escuro);
+    color: white;
+    padding: 8px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    bottom: 120%;
+    width: 100%;
+
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#entregaOptions {
+    display: none;
+    position: absolute;
+    top: 120%;
+    width: 100%;
+
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-options.active {
+    display: block;
+}
+
+.option {
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #444;
+}
+
+.dropdown-entrega {
+    width: 250px;
+    position: relative;
+}
+
+.dropdown-btn-entrega {
+    background: #333;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-options-entrega {
+    display: none;
+    position: absolute;
+    top: 110%;
+    width: 100%;
+    background: #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.dropdown-options-entrega.active {
+    display: block;
+}
+
+.option-entrega {
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+}
+
+.option-entrega:hover {
+    background: #555;
 }
