@@ -38,6 +38,14 @@
 
 .descricaoDoAcaiSelecionado {
     margin: 25px;
+    border: 3px solid var(--roxo-claro);
+    padding: 17px;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
 .descricaoDoAcaiSelecionado h1 {
@@ -46,20 +54,24 @@
     text-align: center;
     margin-bottom: 10px;
     color: var(--roxo-principal);
+    font-size: 1.4rem
 }
 
 .descricaoDoAcaiSelecionado p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
 }
 
 .descricaoDoAcaiSelecionado>span {
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bolder;
-    margin-top: 10px;
     display: block;
     text-align: center;
+    border:  3px solid black;
+    width: 50%;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 hr {

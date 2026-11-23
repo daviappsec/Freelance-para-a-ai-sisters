@@ -1,0 +1,212 @@
+
+@charset "UTF-8";
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* CABEÇALHO */
+
+.cabecalhoInformacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   width: 100%;
+}
+
+
+/* BOTÃO VOLTAR */
+
+.botaoVoltar {
+   margin: 16px;
+}
+
+
+.botaoVoltar a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    background-color: white;
+    color: var(--roxo-escuro);
+    border: 1px solid var(--roxo-claro);
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TÍTULO */
+
+.tituloCabecalho {
+    text-align: center;
+    padding: 8px;
+    color: var(--roxo-escuro);
+    margin: 10px;
+}
+
+.tituloCabecalho h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 2rem;
+}
+
+.tituloCabecalho p {
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.mainInformacoes {
+    width: 90%;
+    max-width: 650px;
+    margin: 15px auto 25px;
+}
+
+/* INTRODUÇÃO */
+
+.introducaoInformacoes {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.introducaoInformacoes h2 {
+    color: var(--roxo-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.introducaoInformacoes p {
+    color: var(--texto-principal);
+    font-family: var(--fonte-principal);
+    line-height: 1.6;
+}
+
+/* CARTÕES */
+
+.cartaoInformacao {
+    background-color: var(--fundo-card);
+    padding: 20px;
+    margin-bottom: 18px;
+    border: 1px solid var(--roxo-claro);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+/* TÍTULOS DOS CARTÕES */
+
+.tituloInformacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: var(--roxo-principal);
+}
+
+.tituloInformacao i {
+    width: 24px;
+    height: 24px;
+}
+
+.tituloInformacao h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 1.3rem;
+    color: var(--roxo-escuro);
+}
+
+/* HORÁRIOS */
+
+.listaHorarios {
+    display: flex;
+    flex-direction: column;
+}
+
+.horarioDia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 8px;
+    border-bottom: 1px solid var(--roxo-claro);
+    font-family: var(--fonte-principal);
+}
+
+.horarioDia:last-child {
+    border-bottom: none;
+}
+
+.horarioDia span {
+    color: var(--texto-principal);
+}
+
+.horarioDia strong {
+    color: var(--roxo-escuro);
+    white-space: nowrap;
+}
+
+/* DESTAQUE DO DIA ATUAL */
+
+.horarioDia.diaAtual {
+    background-color: var(--roxo-claro);
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.horarioDia.diaAtual span::after {
+    content: " (hoje)";
+    color: var(--roxo-principal);
+    font-weight: bold;
+}
+
+/* INFORMAÇÕES GERAIS */
+
+.cartaoInformacao p {
+    font-family: var(--fonte-principal);
+    color: var(--texto-principal);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.cartaoInformacao p:last-child {
+    margin-bottom: 0;
+}
+
+/* BOTÃO DO CARDÁPIO */
+
+.botaoCardapio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: var(--roxo-principal);
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: var(--fonte-principal);
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.botaoCardapio:hover {
+    background-color: var(--roxo-escuro);
+}
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
