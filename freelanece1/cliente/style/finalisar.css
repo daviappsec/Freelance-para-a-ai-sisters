@@ -101,7 +101,10 @@ h3 {
     flex-direction: column;
 }
 
+h2 {
+    font-size: 1.2rem;
 
+}
 
 .organizacao p {
     font-size: 1.3rem;
@@ -173,20 +176,22 @@ h3 {
     bottom: 120%;
     width: 100%;
 
-    background: #222;
-    border-radius: 8px;
+    background: var(--roxo-degrader-claro);
+    border-radius: 14px;
     overflow: hidden;
+    color: var(--texto-principal);
 }
 
-#entregaOptions {
+.dropdown-options-entrega {
     display: none;
     position: absolute;
     top: 120%;
     width: 100%;
-
     background: #222;
     border-radius: 8px;
     overflow: hidden;
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 .dropdown-options.active {
@@ -195,26 +200,37 @@ h3 {
 
 .option {
     padding: 12px;
-    color: white;
     cursor: pointer;
 }
 
 .option:hover {
-    background: #444;
+    background: var(--roxo-escuro);
+    color: var(--texto-claro);
+    transition: 1s;
 }
 
+
+
+
+
 .dropdown-entrega {
-    width: 250px;
+    width: 90%;
     position: relative;
 }
 
 .dropdown-btn-entrega {
-    background: #333;
+    background: var(--roxo-escuro);
     color: white;
-    padding: 12px;
+    padding: 8px 25px;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+
+
     display: flex;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -223,9 +239,15 @@ h3 {
     position: absolute;
     top: 110%;
     width: 100%;
-    background: #333;
+    background: var(--roxo-degrader-claro);
     border-radius: 8px;
     overflow: hidden;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.dropdown-options.active {
+    display: block;
 }
 
 .dropdown-options-entrega.active {
@@ -234,10 +256,75 @@ h3 {
 
 .option-entrega {
     padding: 12px;
-    color: white;
+    color: var(--texto-principal);
     cursor: pointer;
+    font-weight: 100;
 }
 
 .option-entrega:hover {
-    background: #555;
+    background: var(--roxo-escuro);
+    color: var(--texto-claro);
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.input {
+    width: 90%;
+
+}
+
+input {
+    padding: 12px;
+    width: 90%;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+input:focus {
+    background-color: var(--roxo-degrader-claro);
+    color: var(--texto-principal);
+    text-align: left;
+    border-color: var(--dourado);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.finalisarEEntregarPedido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.finalisarEEntregarPedido > .button
+ {
+    width: 80%;
+    text-align: center;
+    margin: 8px 0px 8px 0px;
+   background-color: var(--roxo-degrader);
+   padding: 10px;
+   border-radius: 10px;
+   font-weight: bolder;
+   font-size: 1.1rem;
+   color: var(--texto-principal);
+   text-decoration: none;
+   border: none;
+}
+
+#button {
+    margin-top: 30px;
+    margin-bottom: 3px;
+}
+
+#aButon {
+    margin-bottom: 40px;
+}
+
+.button:hover {
+    background-color: var(--roxo-escuro);
+    color: var(--texto-claro);
+    pointer-events: painted;
+    transition: 1s;
 }
