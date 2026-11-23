@@ -20,8 +20,8 @@ header section {
     font-family: var(--font-titulos);
 
     position: absolute;
-    top: 25%;
-    left: 24%;
+    top: 20%;
+   right: 30%;
     transform: translate(-50%, -50%);
 
     text-align: center;
@@ -36,16 +36,16 @@ header section {
 /* MENU HAMBÚRGUER */
 .statusP {
     position: absolute;
-    top: 5%;
-    right: 3%;
-    z-index: 20;
+    top: 0%;
+    right: 2%;
+    z-index: 1;
 }
 
 .menu-hamburguer {
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
 
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.668);
     color: var(--texto-principal);
 
     border: none;
@@ -55,7 +55,7 @@ header section {
 }
 
 [data-lucide="menu"] {
-    width: 32px;
+    width: 33px;
     height: 32px;
     stroke-width: 3;
 }
@@ -87,7 +87,7 @@ header section {
     color: var(--texto-principal);
     text-decoration: none;
     font-family: var(--font-principal);
-    font-size: 15px;
+    font-size: 1.3rem;
 }
 
 .itemHamburguer a:hover {
